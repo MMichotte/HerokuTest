@@ -17,7 +17,6 @@ This project is used as a continuous integration example.
 - [ ] Setup basic **backend** in NodeJs & Express
     - [X] nodemon 
     - [X] create very basic api 
-    - [ ] serve Frontend 
     - [ ] add unit-tests
 - [ ] Setup basic **frontend** in Angular 
     - [ ] welcome page
@@ -28,6 +27,7 @@ This project is used as a continuous integration example.
     - [ ] add unit-tests
 
 - [ ] run all locally (manually)
+- [ ] serve Frontend from backend 
 
 - [ ] Initialize Heroku app 
 - [ ] create github action -> on push to master
