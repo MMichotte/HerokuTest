@@ -1,6 +1,6 @@
 import cars from '../models/car'
 
-export default function carControllerFactory() {
+function carControllerFactory() {
     return Object.freeze({
         getAllCars,
     });
@@ -17,3 +17,6 @@ export default function carControllerFactory() {
     } 
 
 };
+
+const carController = carControllerFactory();
+export default carController
