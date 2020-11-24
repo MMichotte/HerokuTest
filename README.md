@@ -15,8 +15,8 @@ This project is used as a continuous integration example.
 - [X] Initialize gitHub repository
 
 - [ ] Setup basic **backend** in NodeJs & Express
-    - [ ] nodemon 
-    - [ ] create very basic api 
+    - [X] nodemon 
+    - [X] create very basic api 
     - [ ] serve Frontend 
     - [ ] add unit-tests
 - [ ] Setup basic **frontend** in Angular 
@@ -27,7 +27,7 @@ This project is used as a continuous integration example.
         - [ ] display data 
     - [ ] add unit-tests
 
-- [ ] run all locally 
+- [ ] run all locally (manually)
 
 - [ ] Initialize Heroku app 
 - [ ] create github action -> on push to master
