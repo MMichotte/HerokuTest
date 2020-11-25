@@ -31,5 +31,5 @@ jobs:
       - name: FRONTEND - build & mv
         working-directory: ./frontend
         run: |
-          npm build
+          npm run build
           ls -a
