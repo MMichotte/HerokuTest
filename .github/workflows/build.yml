@@ -53,11 +53,11 @@ jobs:
       - name: Re-organize files
         working-directory: ./
         run: |
-          rm -rf frontend
+          rm -rf ./frontend
           cd ./backend
           mv * ../
           cd ../
-          rm ./backend
+          rm -rf ./backend
           ls -a
 
       - name: Commit changes
