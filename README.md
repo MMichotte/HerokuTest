@@ -38,4 +38,10 @@ This project is used as a continuous integration example.
     - [X] move ./dist from frontend to backend 
     - [X] test backend
     - [ ] build backend ?
-    - [ ] push to heroku 
+    - [X] push to heroku 
+
+## Issues :
+- Heroku push not working if app was created beforehand.
+  - app must be created with the `akhileshns/heroku-deploy@v3.3.6` workflow.
+- On app creation w/ `akhileshns/heroku-deploy@v3.3.6`, region is set to US. (How to change to EU?)
+- Use `appdir`option instead of re-organizing files ? 
