@@ -1,2 +1,7 @@
 private
 node_modules
+
+config.js
+logs
+*.logs
+npm-debug.log*
