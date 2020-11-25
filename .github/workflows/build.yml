@@ -32,7 +32,7 @@ jobs:
         working-directory: ./frontend
         run: |
           npm run build
-          mv ./dist ../backend/public
+          mv ./dist ../backend/public/dist
           ls ../backend/public/dist
 
       - name: BACKEND - npm install
