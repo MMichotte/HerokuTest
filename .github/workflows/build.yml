@@ -32,6 +32,8 @@ jobs:
         working-directory: ./frontend
         run: |
           npm run build
+          ls ./
+          ls ../backend
           mv ./dist ../backend/public/dist
           ls ../backend/public/dist
 
