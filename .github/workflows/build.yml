@@ -13,12 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: FRONTEND - Node ${{ matrix.node-version }}
+      - name: Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-          working-directory: ./frontend
-            
+
       - name: FRONTEND - npm install
         working-directory: ./frontend
         run: |
@@ -28,3 +27,9 @@ jobs:
         working-directory: ./frontend
         run: |
           npm test
+      
+      - name: FRONTEND - build & mv
+        working-directory: ./frontend
+        run: |
+          npm build
+          ls -a
