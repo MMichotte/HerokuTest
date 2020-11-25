@@ -7,9 +7,31 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.16.1]
     steps:
       - uses: actions/checkout@v2
-      - name: Test Frontend
+
+      - name: FRONTEND - Cache node modules
+        working-directory: ./frontend
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: FRONTEND - Node ${{ matrix.node-version }}
+        working-directory: ./frontend
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: FRONTEND - npm install
+        working-directory: ./frontend
+        run: |
+          npm install
+
+      - name: FRONTEND - run tests
         working-directory: ./frontend
         run: |
           npm test
