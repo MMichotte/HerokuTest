@@ -14,16 +14,16 @@ This project is used as a continuous integration example.
 
 - [X] Initialize gitHub repository
 
-- [ ] Setup basic **backend** in NodeJs & Express
+- [X] Setup basic **backend** in NodeJs & Express
     - [X] nodemon 
     - [X] create very basic api 
-    - [ ] add unit-tests
+    - [X] add unit-tests
 - [ ] Setup basic **frontend** in Angular 
-    - [ ] welcome page
-    - [ ] simple route to page 2
-    - [ ] add button
-        - [ ] fetch data from api 
-        - [ ] display data 
+    - [X] welcome page
+    - [X] Cars page
+      - [X] fetch data from API on page load
+      - [X] display data
+      - [X] spinner while data load
     - [ ] add unit-tests
 
 - [ ] run all locally (manually)

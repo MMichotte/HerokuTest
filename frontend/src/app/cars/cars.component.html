@@ -1,0 +1,35 @@
+<div class="vertical-center">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h2>Available cars :</h2>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div *ngIf="carsLoaded">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Price (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let car of cars">
+                            <td>{{car.brand}}</td>
+                            <td>{{car.model}}</td>
+                            <td>{{car.color}}</td>
+                            <td>{{car.price}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div *ngIf="!carsLoaded">
+                <app-spinner></app-spinner>
+            </div>
+        </div>
+
+    </div>
+</div>
