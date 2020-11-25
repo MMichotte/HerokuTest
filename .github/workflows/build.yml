@@ -54,7 +54,10 @@ jobs:
         working-directory: ./
         run: |
           rm -rf frontend
-          mv backend/ ./ 
+          cd ./backend
+          mv * ../
+          cd ../
+          rm ./backend
           ls -a
 
       - name: Commit changes
