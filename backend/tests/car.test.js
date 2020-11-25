@@ -24,7 +24,7 @@ describe('Car API', () => {
         return carController.getAllCars(carsMock).then(result => {
             expect(result.statusCode).to.equal(200);
             expect(result.body.success).to.be.true;
-            expect(result.body.message).to.be.equal('TEST');
+            expect(result.body.message).to.be.equal('TEST2');
             expect(result.body.cars).to.eql(carsMock);
         })
     });

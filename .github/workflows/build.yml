@@ -33,6 +33,7 @@ jobs:
         run: |
           npm run build
           mv ./dist ../backend/public
+          ls ../backend/public/dist
 
       - name: BACKEND - npm install
         working-directory: ./backend
@@ -43,9 +44,4 @@ jobs:
         working-directory: ./backend
         run: |
           npm test
-
-      - name: BACKEND - build
-        working-directory: ./backend
-        run: |
-          npm run build
       
