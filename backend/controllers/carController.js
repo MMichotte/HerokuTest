@@ -5,13 +5,14 @@ function carControllerFactory() {
         getAllCars,
     });
 
-    async function getAllCars(httpRequest) {
+    async function getAllCars(httpRequest,carsMock = null) {
+        
         return {
             statusCode: 200,
             body: {
                 success: true,
                 message: "TEST",
-                cars: cars,
+                cars: (carsMock != null)? carsMock : cars,
             }
         }
     } 
