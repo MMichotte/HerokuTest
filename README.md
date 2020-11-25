@@ -30,7 +30,7 @@ This project is used as a continuous integration example.
 - [X] run all locally (manually)
 - [X] serve Frontend from backend 
 
-- [ ] Initialize Heroku app 
+- [X] Initialize Heroku app 
 - [ ] create github action -> on push to master
     - [ ] build frontend
     - [ ] move dist/build from frontend to backend ? 
