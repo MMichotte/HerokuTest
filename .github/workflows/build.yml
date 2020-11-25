@@ -47,13 +47,13 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name << MMichotte >>
-          git config --global user.email << martin.michotte@gmail.com >>
+          git config --global user.name "MMichotte"
+          git config --global user.email "martin.michotte@gmail.com"
           git add .
           git commit -m "passed tests & build"
     
       - uses: akhileshns/heroku-deploy@v3.3.6
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: << my-garage-test >>
-          heroku_email: << martin.michotte@gmail.com >>
+          heroku_app_name: "my-garage-test"
+          heroku_email: "martin.michotte@gmail.com"

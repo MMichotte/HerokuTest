@@ -32,7 +32,8 @@ This project is used as a continuous integration example.
 
 - [X] Initialize Heroku app 
 - [ ] create github action -> on push to master
-    - [ ] build frontend
-    - [ ] move dist/build from frontend to backend ? 
-    - [ ] build backend
+    - [X] test frontend
+    - [X] build frontend
+    - [X] move ./dist from frontend to backend 
+    - [X] test backend
     - [ ] push to heroku 
