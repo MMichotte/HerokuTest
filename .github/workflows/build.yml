@@ -13,19 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: FRONTEND - Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-        working-directory: ./frontend
       - name: FRONTEND - Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        working-directory: ./frontend
+          working-directory: ./frontend
+            
       - name: FRONTEND - npm install
         working-directory: ./frontend
         run: |
