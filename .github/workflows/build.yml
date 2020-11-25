@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test Frontend
+        working-directory: ./frontend
         run: |
-          working-directory: ./frontend
           npm test
