@@ -30,7 +30,7 @@ describe('CarsComponent', () => {
   });
 
   it('cars should initialize empty', () => {
-    expect(component.cars).toEqual([]);
+    expect(component.cars).toEqual([1]);
   });
 
 });
