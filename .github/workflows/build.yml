@@ -50,6 +50,13 @@ jobs:
         run: |
           rm .gitignore
 
+      - name: Re-organize files
+        working-directory: ./
+        run: |
+          rm -rf frontend
+          mv backend/ ./ 
+          ls -a
+
       - name: Commit changes
         working-directory: ./
         run: |
