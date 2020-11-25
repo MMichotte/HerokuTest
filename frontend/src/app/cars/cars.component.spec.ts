@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarsComponent } from './cars.component';
@@ -8,6 +9,7 @@ describe('CarsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ CarsComponent ]
     })
     .compileComponents();
@@ -22,4 +24,13 @@ describe('CarsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('carsLoaded should initialize at false', () => {
+    expect(component.carsLoaded).toBeFalse();
+  });
+
+  it('cars should initialize empty', () => {
+    expect(component.cars).toEqual([]);
+  });
+
 });

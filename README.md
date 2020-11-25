@@ -18,13 +18,14 @@ This project is used as a continuous integration example.
     - [X] nodemon 
     - [X] create very basic api 
     - [X] add unit-tests
-- [ ] Setup basic **frontend** in Angular 
+- [X] Setup basic **frontend** in Angular 
     - [X] welcome page
     - [X] Cars page
       - [X] fetch data from API on page load
       - [X] display data
       - [X] spinner while data load
-    - [ ] add unit-tests
+    - [X] add unit-tests
+    - [ ] advanced unit-tests
 
 - [ ] run all locally (manually)
 - [ ] serve Frontend from backend 
