@@ -27,8 +27,8 @@ This project is used as a continuous integration example.
     - [X] add unit-tests
     - [ ] advanced unit-tests
 
-- [ ] run all locally (manually)
-- [ ] serve Frontend from backend 
+- [X] run all locally (manually)
+- [X] serve Frontend from backend 
 
 - [ ] Initialize Heroku app 
 - [ ] create github action -> on push to master

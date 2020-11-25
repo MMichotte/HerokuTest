@@ -1,3 +1,4 @@
+import path from "path";
 import consola from "consola";
 
 export default function express_server(express) {
@@ -39,9 +40,31 @@ export default function express_server(express) {
      */
     this.addRouting = route => {
 
+        /* homepage route */
+        this.app.get('/', (req, res) => {
+            return res.sendFile(path
+                .join(__dirname + '/public', 'dist', 'index.html'));
+        });
+
         /* API routes */
         this.app.use('/api/', route.carRoutes)
 
+        /* ANY route */
+        this.app.get('*', (req, res) => {
+            return res.sendFile(path
+                .join(__dirname + '/public', 'dist', 'index.html'));
+        });
+
+        return this;
+    }
+
+    /** @staticFilesHandler
+     * Function to serve static files
+     * @returns {this} reference to the express app
+     */
+    this.serveStaticFiles = () => {
+        this.app.use(express.static(path
+            .join(__dirname, '/public', 'dist')));
         return this;
     }
 

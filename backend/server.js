@@ -14,6 +14,7 @@ server
     .addMiddleware(bodyParser.json())
     .addMiddleware(addRequestId)
     .helmetSecurity(helmet)
+    .serveStaticFiles()
     .addRouting(routes)
     .errorHandler()
     .listenOn(process.env.PORT || 8000);
