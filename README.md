@@ -26,6 +26,7 @@ This project is used as a continuous integration example.
       - [X] spinner while data load
     - [X] add unit-tests
     - [ ] advanced unit-tests
+- [ ] add end-to-end tests ?
 
 - [X] run all locally (manually)
 - [X] serve Frontend from backend 
@@ -36,4 +37,5 @@ This project is used as a continuous integration example.
     - [X] build frontend
     - [X] move ./dist from frontend to backend 
     - [X] test backend
+    - [ ] build backend ?
     - [ ] push to heroku 

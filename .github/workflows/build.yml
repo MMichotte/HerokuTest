@@ -28,7 +28,7 @@ jobs:
         run: |
           npm run test-headless  
       
-      - name: FRONTEND - build & mv
+      - name: FRONTEND - build & move to backend
         working-directory: ./frontend
         run: |
           npm run build
@@ -45,7 +45,13 @@ jobs:
         run: |
           npm test
 
+      - name: BACKEND - remove .gitignore
+        working-directory: ./backend
+        run: |
+          rm .gitignore
+
       - name: Commit changes
+        working-directory: ./
         run: |
           git config --global user.name "MMichotte"
           git config --global user.email "martin.michotte@gmail.com"
