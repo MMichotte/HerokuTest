@@ -55,10 +55,8 @@ jobs:
       - name: npm install
         working-directory: ./
         run: |
-          cd ./backend
-          npm install
-          cd ./frontend
-          npm install
+          cd ./backend && npm install
+          cd ../frontend && npm install
 
       - name: build frontend & move to backend
         working-directory: ./frontend
