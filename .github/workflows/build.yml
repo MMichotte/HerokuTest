@@ -12,10 +12,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - name: Node ${{ env.node-version }}
+        - name: Node ${{ node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ env.node-version }}
+          node-version: ${{ node-version }}
         - name: npm install
         working-directory: ./frontend
         run: |
