@@ -5,17 +5,17 @@ on:
       - main
 
 env:
-  node-version: 10.15.1
+  node-version: "10.15.1"
       
 jobs:
   test-frontend:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - name: Node ${{ node-version }}
+        - name: Node ${{ env.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ node-version }}
+          node-version: ${{ env.node-version }}
         - name: npm install
         working-directory: ./frontend
         run: |
