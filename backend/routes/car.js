@@ -1,5 +1,5 @@
 import express from 'express'
-import carController from '../controllers/carController'
+import * as carController from '../controllers/carController'
 import makeCallback from '../helpers/express-callback'
 
 const router = express.Router();
