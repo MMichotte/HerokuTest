@@ -41,9 +41,10 @@ This project is used as a continuous integration example.
     - [X] push to heroku 
 
 **Phase 2 :**
-- [ ] add postgreSQL database on Heroku
+- [X] add postgreSQL database on Heroku
 - [ ] set ENV variables to configure app
 - [ ] use postgres db in backend to store data
+  - [ ] CRUD on cars
 
 ## Issues :
 - Heroku push not working if app was created beforehand. (solved ✅)
