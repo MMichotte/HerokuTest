@@ -40,7 +40,12 @@ This project is used as a continuous integration example.
     - [ ] build backend ?
     - [X] push to heroku 
 
+**Phase 2 :**
+- [ ] add postgreSQL database on Heroku
+- [ ] set ENV variables to configure app
+- [ ] use postgres db in backend to store data
+
 ## Issues :
-- Heroku push not working if app was created beforehand.
+- Heroku push not working if app was created beforehand. (solved ✅)
   - app must be created with the `akhileshns/heroku-deploy@v3.3.6` workflow.
-- On app creation w/ `akhileshns/heroku-deploy@v3.3.6`, region is set to US. (How to change to EU?)
+- On app creation w/ `akhileshns/heroku-deploy@v3.3.6`, region is set to US. (How to change to EU?) (solved ✅)
