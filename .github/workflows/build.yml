@@ -89,5 +89,5 @@ jobs:
           heroku_email: "martin.michotte@gmail.com"
           appdir: "backend"
         env:
-          HD_NODE_ENV: "PROD"
+          HD_NODE_ENV: "prod"
           
