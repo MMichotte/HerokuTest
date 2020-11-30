@@ -42,7 +42,7 @@ This project is used as a continuous integration example.
 
 **Phase 2 :**
 - [X] add postgreSQL database on Heroku
-- [ ] set ENV variables to configure app
+- [X] set ENV variables to configure app
 - [ ] use postgres db in backend to store data
   - [ ] CRUD on cars
 
