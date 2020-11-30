@@ -3,7 +3,7 @@ import {expect} from 'chai'
 import chaiHttp from 'chai-http'
 
 import server from '../server';
-import * as carController from '../controllers/carController'
+//import * as carController from '../controllers/carController'
 import carsMock from './mocks/car'
 
 
