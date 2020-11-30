@@ -1,5 +1,5 @@
 import {Sequelize} from 'sequelize';
-import dbConnection from "../../config/database";
+import dbConnection from '../../config/database';
 
 const Cars = dbConnection.define('cars', {
     _carId: {
