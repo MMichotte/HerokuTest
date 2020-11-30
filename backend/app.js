@@ -1,9 +1,38 @@
 import path from "path";
 import consola from "consola";
+import dbConnection from "./config/database";
+import env from "./config/env";
 
 export default function express_server(express) {
 
     this.app = express();
+
+    /** @databaseInitiation
+     * Function to initiate the database connection
+     * @returns {this} reference to the function it self
+     */
+    this.initDatabase = () => {
+        dbConnection.authenticate()
+            .then(() => {
+                    if (env.NODE_ENV === 'prod') {
+                        consola.success(
+                            {
+                                message: `Database connected successfully to ${env.DATABASE_URL}`,
+                                badge: true
+                            })
+                    } else if (env.NODE_ENV === 'dev') {
+                        consola.success(
+                            {
+                                message: `Database connected successfully to ${env.POSTGRES_DB} database`,
+                                badge: true
+                            })
+                    }
+                }
+            )
+            .catch(error => console.error(`Unable to connect to ${env.POSTGRES_DB} database:`, error));
+
+        return this;
+    };
 
     /** @middlewareHandler
      * Function to add middleware
