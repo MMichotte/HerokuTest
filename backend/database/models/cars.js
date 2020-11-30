@@ -1,8 +1,7 @@
 import {Sequelize} from 'sequelize';
-import dbConnection from "../config/database";
+import dbConnection from "../../config/database";
 
-const cars = dbConnection.define('cars', {
-
+const Cars = dbConnection.define('cars', {
     _carId: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -17,13 +16,27 @@ const cars = dbConnection.define('cars', {
         type: Sequelize.STRING,
         unique: false,
         allowNull: false,
-
+    },
+    carColor: {
+        type: Sequelize.STRING,
+        unique: false,
+        allowNull: false,
     },
     carPrice: {
         type: Sequelize.BIGINT,
         unique: false,
         allowNull: false
+    },
+    createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: new Date(),
+    },
+    updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: new Date(),
     }
 });
 
-export default cars;
+export default Cars;

@@ -7,12 +7,18 @@ module.exports = {
                 {
                     carBrand: 'BMW',
                     carModel: 'M4',
-                    carPrice: 123530
+                    carColor: 'Blue',
+                    carPrice: 123530,
+                    createdAt: new Date(),
+                    updatedAt: new Date()
                 },
                 {   
                     carBrand: 'Ford',
                     carModel: 'Mustang',
-                    carPrice: 82300
+                    carColor: 'Red',
+                    carPrice: 82300,
+                    createdAt: new Date(),
+                    updatedAt: new Date()
                 },
             ],
             {}
