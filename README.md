@@ -45,6 +45,7 @@ This project is used as a continuous integration example.
 - [X] set ENV variables to configure app
 - [ ] use postgres db in backend to store data
   - [ ] CRUD on cars
+  - [ ] tests
 
 ## Issues :
 - Heroku push not working if app was created beforehand. (solved ✅)
