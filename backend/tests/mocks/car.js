@@ -1,17 +1,17 @@
 const carsMock = [
     {
-      _id: '1',
-      brand: 'BMW',
-      model: 'M4',
-      color: 'Blue',
-      price: 123530,
+      carId: '1',
+      carBrand: 'BMW',
+      carModel: 'M4',
+      carColor: 'Blue',
+      carPrice: 123530,
     },
     {
-      _id: '2',
-      brand: 'Ford',
-      model: 'Capri',
-      color: 'Yellow',
-      price: 9925,
+      carId: '2',
+      carBrand: 'Ford',
+      carModel: 'Mustang',
+      carColor: 'Red',
+      carPrice: 82300,
     },
   ];
 
