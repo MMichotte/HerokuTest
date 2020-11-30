@@ -88,4 +88,6 @@ jobs:
           heroku_app_name: "my-garage-test"
           heroku_email: "martin.michotte@gmail.com"
           appdir: "backend"
+        env:
+          HD_NODE_ENV: "PROD"
           

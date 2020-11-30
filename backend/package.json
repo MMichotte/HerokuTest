@@ -24,7 +24,9 @@
     "express": "^4.17.1",
     "express-request-id": "^1.4.1",
     "helmet": "^4.2.0",
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
