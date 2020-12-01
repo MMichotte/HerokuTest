@@ -17,4 +17,4 @@ const dummyCars = [
     }
 ]
 
-export default dummyCars;
+module.exports = dummyCars;

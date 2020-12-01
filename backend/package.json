@@ -19,7 +19,7 @@
     "test:drop:db": "NODE_ENV=test npx sequelize-cli db:drop",
     "test:create:db": "NODE_ENV=test npx sequelize-cli db:create",
     "test:migrate:db": "NODE_ENV=test npx sequelize-cli db:migrate",
-    "test:seed:db": "NODE_ENV=test npx sequelize-cli db:seed:all"
+    "test:seed:db": "NODE_ENV=test npx sequelize-cli db:seed:all --seeders-path './tests/mocks/seeders' "
   },
   "author": "M.Michotte",
   "license": "ISC",
