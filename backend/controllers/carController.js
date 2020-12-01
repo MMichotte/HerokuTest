@@ -1,6 +1,6 @@
 import * as carService from '../services/carService'
 
-async function getAllCars(httpRequest,carsMock = null) {
+async function getAllCars(httpRequest) {
     
     const cars = await carService.getAllCars();
     
@@ -9,7 +9,7 @@ async function getAllCars(httpRequest,carsMock = null) {
         body: {
             success: true,
             message: "TEST",
-            cars: (carsMock != null)? carsMock : cars,
+            cars: cars
         }
     }
 } 

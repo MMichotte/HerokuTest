@@ -10,7 +10,7 @@ import carsTableMock from './mocks/db/carsTable'
 describe('getAllCars', () => {
     it('should return all cars', async () => {
         let carsList = await carService.getAllCars(carsTableMock);
-        expect(carsList.length).to.be.equal(2);
+        expect(carsList.length).to.be.equal(carsMock.length);
         for (let i in carsList) {
             expect(carsList[i].carBrand).to.eql(carsMock[i].carBrand);
             expect(carsList[i].carModel).to.eql(carsMock[i].carModel);
