@@ -1,4 +1,5 @@
 import Sequelize from 'sequelize';
+import SequelizeMock from 'sequelize-mock';
 import env from "./env";
 
 let dbConnection = "";
@@ -20,19 +21,23 @@ if (env.NODE_ENV === 'dev') {
             },
         }
     );
-} else if (env.NODE_ENV === 'prod') {
+} 
+else if (env.NODE_ENV === 'test') {
+    dbConnection = new SequelizeMock();
+} 
+else if (env.NODE_ENV === 'prod') {
 
     dbConnection = new Sequelize(
-        env.DATABASE_URL, 
+        env.DATABASE_URL,
         {
-        ssl: true,
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false
+            ssl: true,
+            dialectOptions: {
+                ssl: {
+                    require: true,
+                    rejectUnauthorized: false
+                }
             }
-        }
-    });
+        });
 }
 
 export default dbConnection;

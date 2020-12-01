@@ -1,7 +1,7 @@
 import Cars from '../database/models/cars'
 
-async function getAllCars(){
-    return Cars.findAll();
+async function getAllCars(cars = Cars){
+    return cars.findAll();
 }
 
 export {getAllCars}
