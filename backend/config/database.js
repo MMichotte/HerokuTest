@@ -24,7 +24,7 @@ if (env.NODE_ENV === 'dev') {
 } 
 else if (env.NODE_ENV === 'test') {
     dbConnection = new Sequelize(
-        'my-garage-test',
+        'my_garage_test',
         'postgres',
         'postgres',
         {

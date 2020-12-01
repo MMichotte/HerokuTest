@@ -15,7 +15,7 @@ module.exports = {
     test: {
         username: 'postgres', 
         password: 'postgres',
-        database: 'my-garage-test', 
+        database: 'my_garage_test', 
         host: 'localhost',
         port: '5432', 
         dialect: 'postgres',
