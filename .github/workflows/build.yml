@@ -30,6 +30,20 @@ jobs:
   
   test-backend:
       runs-on: ubuntu-latest
+      services:
+        postgres:
+          image: postgres:12
+          env:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: my-garage-test
+          ports:
+            - 5432:5432
+          options: >-
+            --health-cmd pg_isready
+            --health-interval 10s
+            --health-timeout 5s
+            --health-retries 5
       steps:
         - uses: actions/checkout@v2
         - name: Setup Node ${{ env.node-version }}
@@ -43,7 +57,7 @@ jobs:
         - name: run tests
           working-directory: ./backend
           run: |
-            npm test
+            npm run test:with:db
 
   build-to-Heroku:
     runs-on: ubuntu-latest

@@ -13,9 +13,12 @@ module.exports = {
         }
     },
     test: {
-        username: '', password: '',
-        database: '', host: '',
-        port: '', dialect: '',
+        username: 'postgres', 
+        password: 'postgres',
+        database: 'my-garage-test', 
+        host: 'localhost',
+        port: '5432', 
+        dialect: 'postgres',
     },
     prod: {
         dialect: 'postgres',

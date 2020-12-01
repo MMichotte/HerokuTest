@@ -3,20 +3,18 @@ import {expect} from 'chai'
 import chaiHttp from 'chai-http'
 
 import * as carService from '../services/carService'
-import carsMock from './mocks/models/cars'
-import carsTableMock from './mocks/db/carsTable'
-
+import dummyCars from './mocks/dummyCars'
 
 describe('getAllCars', () => {
     it('should return all cars', async () => {
-        let carsList = await carService.getAllCars(carsTableMock);
-        expect(carsList.length).to.be.equal(carsMock.length);
+        let carsList = await carService.getAllCars();
+        expect(carsList.length).to.be.equal(dummyCars.length);
         for (let i in carsList) {
-            expect(carsList[i].carBrand).to.eql(carsMock[i].carBrand);
-            expect(carsList[i].carModel).to.eql(carsMock[i].carModel);
-            expect(carsList[i].carColor).to.eql(carsMock[i].carColor);
-            expect(Number(carsList[i].carPrice)).to.eql(carsMock[i].carPrice);
-        }  
+            expect(carsList[i].carBrand).to.eql(dummyCars[i].carBrand);
+            expect(carsList[i].carModel).to.eql(dummyCars[i].carModel);
+            expect(carsList[i].carColor).to.eql(dummyCars[i].carColor);
+            expect(Number(carsList[i].carPrice)).to.eql(dummyCars[i].carPrice);
+        }
     });
 });
 

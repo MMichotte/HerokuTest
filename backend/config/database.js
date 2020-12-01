@@ -23,7 +23,22 @@ if (env.NODE_ENV === 'dev') {
     );
 } 
 else if (env.NODE_ENV === 'test') {
-    dbConnection = new SequelizeMock();
+    dbConnection = new Sequelize(
+        'my-garage-test',
+        'postgres',
+        'postgres',
+        {
+            host: 'localhost',
+            dialect: 'postgres',
+            logging: false,
+            pool: {
+                max: 5,
+                min: 0,
+                acquire: 30000,
+                idle: 10000
+            },
+        }
+    );
 } 
 else if (env.NODE_ENV === 'prod') {
 

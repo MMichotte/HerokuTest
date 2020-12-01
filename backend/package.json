@@ -13,7 +13,13 @@
     "db:migrate": "npx sequelize db:migrate",
     "db:migrate:undo": "npx sequelize db:migrate:undo",
     "db:seed": "sequelize db:seed:all",
-    "test": "NODE_ENV=test mocha --require esm ./tests/ --timeout 10000 --exit"
+    "test": "NODE_ENV=test mocha --require esm ./tests/ --timeout 10000 --exit",
+    "test:with:db": "NODE_ENV=test npm run test:setup && npm run test && npm run test:drop:db",
+    "test:setup": "NODE_ENV=test npm run test:drop:db && npm run test:create:db && npm run test:migrate:db && npm run test:seed:db",
+    "test:drop:db": "NODE_ENV=test npx sequelize-cli db:drop",
+    "test:create:db": "NODE_ENV=test npx sequelize-cli db:create",
+    "test:migrate:db": "NODE_ENV=test npx sequelize-cli db:migrate",
+    "test:seed:db": "NODE_ENV=test npx sequelize-cli db:seed:all"
   },
   "author": "M.Michotte",
   "license": "ISC",
