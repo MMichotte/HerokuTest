@@ -46,7 +46,7 @@ This project is used as a continuous integration example.
 - [ ] use postgres db in backend to store data
   - [ ] CRUD on cars
   - [ ] status handling
-  - [ ] tests
+  -X] tests
 
 ## Issues :
 - Heroku push not working if app was created beforehand. (solved ✅)
