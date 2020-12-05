@@ -6,16 +6,16 @@ env:
 
 jobs:
   test-frontend:
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    working-directory: ./frontend
-    steps:
-      - uses: actions/checkout@v2
-      - name: npm install
-          run: |
-            npm install
-      - name: Lint
-        uses: mooyoul/tslint-actions@v1.1.1
-        with:
-          token: ${{ secrets.ACTION_TOKEN }}
-          pattern: '*.ts'
+      runs-on: ubuntu-latest
+      timeout-minutes: 3
+      working-directory: ./frontend
+      steps:
+        - uses: actions/checkout@v2
+        - name: npm install
+            run: |
+              npm install
+        - name: Lint
+          uses: mooyoul/tslint-actions@v1.1.1
+          with:
+            token: ${{ secrets.ACTION_TOKEN }}
+            pattern: '*.ts'
