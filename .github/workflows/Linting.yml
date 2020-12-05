@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: npm install
-          run: npm install
+          run: |
+          npm install
       - name: Lint
         uses: mooyoul/tslint-actions@v1.1.1
         with:
