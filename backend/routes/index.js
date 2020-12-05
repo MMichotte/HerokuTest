@@ -1,7 +1,7 @@
-import {carRoutes} from './car'
+import { carRoutes } from './car'
 
 const routes = Object.freeze({
-    carRoutes, 
-    });
+  carRoutes
+})
 
 export default routes

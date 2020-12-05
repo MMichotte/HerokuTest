@@ -19,7 +19,9 @@
     "test:drop:db": "NODE_ENV=test npx sequelize-cli db:drop",
     "test:create:db": "NODE_ENV=test npx sequelize-cli db:create",
     "test:migrate:db": "NODE_ENV=test npx sequelize-cli db:migrate",
-    "test:seed:db": "NODE_ENV=test npx sequelize-cli db:seed:all --seeders-path './tests/mocks/seeders' "
+    "test:seed:db": "NODE_ENV=test npx sequelize-cli db:seed:all --seeders-path './tests/mocks/seeders' ",
+    "lint:init": "./node_modules/.bin/eslint --init",
+    "lint": "./node_modules/.bin/eslint --fix \"**/*.js\" --debug"
   },
   "author": "M.Michotte",
   "license": "ISC",
@@ -40,6 +42,25 @@
     "sequelize-mock": "^0.10.2"
   },
   "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "nodemon": "^2.0.6"
-  }
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "env": {
+        "es2021": true,
+        "browser": true
+    },
+    "ignorePatterns": ["**/public/**/*.js"],
+    "rules": {
+        "quotes": [
+            "error",
+            "single"
+        ]
+    }
+}
 }
