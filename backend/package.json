@@ -21,7 +21,7 @@
     "test:migrate:db": "NODE_ENV=test npx sequelize-cli db:migrate",
     "test:seed:db": "NODE_ENV=test npx sequelize-cli db:seed:all --seeders-path './tests/mocks/seeders' ",
     "lint:init": "./node_modules/.bin/eslint --init",
-    "lint": "./node_modules/.bin/eslint --fix \"**/*.js\" --debug"
+    "lint": "./node_modules/.bin/eslint --fix \"**/*.js\" -o ./lintErrors.log --no-color"
   },
   "author": "M.Michotte",
   "license": "ISC",

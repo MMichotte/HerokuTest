@@ -1,0 +1,5 @@
+Linting "frontend"...
+/Users/martinmichotte/Documents/DEV/WEB/HerokuTest/frontend/src/app/cars/cars.component.ts:5:13
+ERROR: 5:13  quotemark  " should be '
+ERROR: 23:2  eofline    file should end with a newline
+

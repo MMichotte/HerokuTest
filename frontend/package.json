@@ -8,7 +8,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
-    "lint": "ng lint",
+    "lint": "ng lint > ./lintError.log",
     "e2e": "ng e2e"
   },
   "private": true,
