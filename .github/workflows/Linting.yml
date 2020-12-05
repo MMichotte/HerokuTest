@@ -20,7 +20,7 @@ jobs:
       - name: Lint
         run: |
           set +e
-          npm run lint
+          npm run lint -- --fix
           set -e
       - name: push linted code to main
         uses: mikeal/publish-to-github-action@master
