@@ -1,4 +1,4 @@
-import chai, { expect, it } from 'chai'
+import chai, { expect } from 'chai'
 
 import chaiHttp from 'chai-http'
 

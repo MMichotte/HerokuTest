@@ -6,6 +6,7 @@ env:
 
 jobs:
   lint-frontend:
+    if: "!contains(github.event.head_commit.message, 'Automated publish')"
     runs-on: ubuntu-latest
     timeout-minutes: 3
     defaults:
@@ -21,9 +22,15 @@ jobs:
           set +e
           npm run lint
           set -e
+      - name: push linted code to main
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          BRANCH_NAME: 'main'
           
   
   lint-backend:
+    if: "!contains(github.event.head_commit.message, 'Automated publish')"
     runs-on: ubuntu-latest
     timeout-minutes: 3
     defaults:
@@ -39,3 +46,8 @@ jobs:
           set +e
           npm run lint
           set -e
+      - name: push linted code to main
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          BRANCH_NAME: 'main'
