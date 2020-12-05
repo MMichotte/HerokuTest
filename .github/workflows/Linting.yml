@@ -22,11 +22,15 @@ jobs:
           set +e
           npm run lint -- --fix
           set -e
+      - name: Get the current branch name
+        shell: bash
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+        id: myref
       - name: push linted code to main
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
-          BRANCH_NAME: '${GITHUB_REF##*/}'
+          BRANCH_NAME: ${{ steps.myref.outputs.branch }}
           
   
   lint-backend:
@@ -46,8 +50,12 @@ jobs:
           set +e
           npm run lint
           set -e
+      - name: Get the current branch name
+        shell: bash
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+        id: myref
       - name: push linted code to main
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
-          BRANCH_NAME: '${GITHUB_REF##*/}'
+          BRANCH_NAME: ${{ steps.myref.outputs.branch }}
