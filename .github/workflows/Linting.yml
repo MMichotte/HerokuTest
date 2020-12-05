@@ -5,7 +5,7 @@ env:
   node-version: 14.15.1
 
 jobs:
-  test-frontend:
+  lint-frontend:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     defaults:
@@ -17,7 +17,25 @@ jobs:
         run: |
           npm install
       - name: Lint
-        uses: mooyoul/tslint-actions@v1.1.1
-        with:
-          token: ${{ secrets.ACTION_TOKEN }}
-          pattern: '*.ts'
+        run: |
+          set +e
+          npm run lint
+          set -e
+          
+  
+  lint-backend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - uses: actions/checkout@v2
+      - name: npm install
+        run: |
+          npm install
+      - name: Lint
+        run: |
+          set +e
+          npm run lint
+          set -e
