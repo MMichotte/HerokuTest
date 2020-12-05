@@ -52,15 +52,17 @@
   "eslintConfig": {
     "extends": "standard",
     "env": {
-        "es2021": true,
-        "browser": true
+      "es2021": true,
+      "browser": true
     },
-    "ignorePatterns": ["**/public/**/*.js"],
+    "ignorePatterns": [
+      "**/public/**/*.js"
+    ],
     "rules": {
-        "quotes": [
-            "error",
-            "single"
-        ]
+      "quotes": [
+        "error",
+        "single"
+      ]
     }
-}
+  }
 }
