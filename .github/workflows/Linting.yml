@@ -22,6 +22,7 @@ jobs:
           set +e
           npm run lint -- --fix
           set -e
+          echo ${GITHUB_REF##*/}
       - name: push linted code to main
         uses: mikeal/publish-to-github-action@master
         env:
