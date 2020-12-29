@@ -14,15 +14,14 @@ async function getAllCars (httpRequest) {
 }
 
 async function getSearchedCars (httpRequest) {
-  
-  let brand = httpRequest.query.brand
+  const brand = httpRequest.query.brand
   console.log(brand)
 
   return {
     statusCode: 200,
     body: {
       success: true,
-      message: 'TEST 2',
+      message: 'TEST 2'
     }
   }
 }
