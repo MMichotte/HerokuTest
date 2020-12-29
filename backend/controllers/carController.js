@@ -13,4 +13,18 @@ async function getAllCars (httpRequest) {
   }
 }
 
-export { getAllCars }
+async function getSearchedCars (httpRequest) {
+  
+  let brand = httpRequest.query.brand
+  console.log(brand)
+
+  return {
+    statusCode: 200,
+    body: {
+      success: true,
+      message: 'TEST 2',
+    }
+  }
+}
+
+export { getAllCars, getSearchedCars }
